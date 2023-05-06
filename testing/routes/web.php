@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BeliController;
 use App\Http\Controllers\DataController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,5 @@ Route::get('/', function () {
 
 Route::get('/data', [DataController::class, 'index']);
 Route::get('/check-data', [DataController::class, 'checkData']);
+Route::get('/belis', [BeliController::class, 'index'])->name('show');
+Route::get('/beli', [BeliController::class, 'show'])->name('show');
